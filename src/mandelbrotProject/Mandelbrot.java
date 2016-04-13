@@ -16,8 +16,7 @@ import java.io.IOException;
      *************************************************
      * set up a Canvas and create scene for Java FX  *
      * Consruct the Mandelbrot method                *
-     * draw the Mandelbrot method on the stage       *
-     *                                               *
+     * draw the Mandelbrot method on the stage       *                                              *
      *************************************************/
 
 public class Mandelbrot extends Application {
@@ -40,6 +39,7 @@ public class Mandelbrot extends Application {
                     .width(CanvasWidth)
                     .build();
 
+
             //Colors for the Mandelbrotset
             colorSet(canvas.getGraphicsContext2D(),
                     MandelbrotRealNoMin,
@@ -47,12 +47,15 @@ public class Mandelbrot extends Application {
                     MandelbrotImmNoMin,
                     MandelbrotImmNoMax);
 
+
+
             //Add canvas to root
             pane.getChildren().add(canvas);
 
             //SetScene and Show Stage
             Scene scene = new Scene(pane);
             scene.setFill(Color.BLACK);
+
             primaryStage.setTitle("Mandelbrotset");
             primaryStage.setScene(scene);
             primaryStage.show();
